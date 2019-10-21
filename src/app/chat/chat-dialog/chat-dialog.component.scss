@@ -10,6 +10,12 @@
   flex-direction: column;
 }
 
+.chat__title {
+  text-align: center;
+  font-size: 1.3rem;
+  padding: 8px;
+}
+
 .chat__content {
   height: 100%;
   overflow: hidden;
@@ -44,7 +50,7 @@
   font-size: 1rem;
   width: 100%;
   border-radius: 16px;
-  padding: 4px 16px;
+  padding: 8px 16px;
   border: 1px solid black;
 }
 
@@ -67,6 +73,20 @@
 .message-from {
   background-color: #ffffff;
   margin-right: auto;
+  margin-left: 45px;
+}
+
+.message-from::before {
+  content: '';
+  background: url("../../../assets/bot-avatar.jpg");
+  width: 40px;
+  height: 40px;
+  display: block;
+  background-size: contain;
+  border-radius: 50%;
+  position: absolute;
+  left: -45px;
+  top: 0;
 }
 
 .message-to {
