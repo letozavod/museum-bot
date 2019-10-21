@@ -1,18 +1,21 @@
-<h1>Angular Bot</h1>
+<div class="chat">
+    <div class="chat__content">
+        <div class="chat__content-wrapper">
+            <ng-container *ngFor="let message of messages | async">
 
-<ng-container *ngFor="let message of messages | async">
+                <div class="message" [ngClass]="{ 'message-from': message.sentBy === 'bot',
+                                    'message-to':   message.sentBy === 'user' }">
+                    {{ message.content }}
+                </div>
 
-  <div class="message" [ngClass]="{ 'from': message.sentBy === 'bot',
-                                    'to':   message.sentBy === 'user' }">
-    {{ message.content }}
-  </div>
-
-</ng-container>
-
-
-<label for="nameField">Your Message</label>
-
-
-<input [(ngModel)]="formValue" (keyup.enter)="sendMessage()" type="text">
-
-<button (click)="sendMessage()">Send</button>
+            </ng-container>
+            <div id="anchor"></div>
+        </div>
+    </div>
+    <div class="chat__footer">
+        <input type="text" [(ngModel)]="formValue" (keyup.enter)="sendMessage()" class="chat__text">
+        <button class="chat__send" (click)="sendMessage()">
+            <i class="material-icons">send</i>
+        </button>
+    </div>
+</div>

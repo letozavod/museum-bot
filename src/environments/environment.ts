@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   dialogflow: {
-    angularBot: 'YOUR_TOKEN'
+    angularBot: 'ff0eee17c39b4eb48da41e8b793d465c'
   }
 };
 

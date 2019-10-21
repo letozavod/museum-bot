@@ -27,4 +27,9 @@ export class ChatDialogComponent implements OnInit {
     this.formValue = '';
   }
 
+    updateScroll() {
+        let element = document.getElementsByClassName("chat__content")[0];
+        element.scrollTop = element.scrollHeight;
+    }
+
 }
