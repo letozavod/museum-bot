@@ -124,6 +124,19 @@ const topExhibits = [
 export class TopExhibitIntent implements IntentInterface {
 
   getResponse() {
-    return topExhibits[Math.floor(Math.random()*topExhibits.length)];
+    const payload = topExhibits[Math.floor(Math.random()*topExhibits.length)];
+    const response = {
+      "fulfillmentText": `Экспонат: ${payload.title}\n\n${payload.description}`,
+      "fulfillmentMessages": [
+        {
+          "card": {
+            "title": payload.title,
+            "subtitle": payload.description,
+            "imageUri": payload.image,
+          }
+        }
+      ]
+    };
+    return response;
   }
 }

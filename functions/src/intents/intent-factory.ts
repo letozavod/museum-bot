@@ -1,6 +1,6 @@
 import { TopExhibitIntent } from './top-exhibit.intent';
 
-export const TOP_EXHIBIT_INTENT = 'top';
+export const TOP_EXHIBIT_INTENT = 'topExhibit';
 export const ABOUT_MUSEUM_INTENT = 'aboutMuseum';
 
 export class IntentFactory {
