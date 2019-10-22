@@ -1,7 +1,8 @@
 <div class="chat">
-    <div class="chat__title">Люба Мамонтова</div>
+    <div class="chat__title">Чат с Любой Мамонтовой</div>
     <div class="chat__content">
-        <div class="chat__content-wrapper">
+        <div class="chat__content-wrapper"  itemscope itemtype="http://schema.org/ImageGallery">
+
             <ng-container *ngFor="let message of messages | async">
 
                 <div class="message" [ngClass]="{ 'message-from': message.sentBy === 'bot',
@@ -15,7 +16,7 @@
     </div>
     <div class="chat__footer">
         <input type="text" [(ngModel)]="formValue" (keyup.enter)="sendMessage()" class="chat__text">
-        <button class="chat__send" (click)="sendMessage()">
+        <button class="chat__send" (click)="sendMessage()" [disabled]="!formValue">
             <i class="material-icons">send</i>
         </button>
     </div>

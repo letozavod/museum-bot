@@ -23,13 +23,9 @@ export class ChatDialogComponent implements OnInit {
   }
 
   sendMessage() {
+    if (!this.formValue) { return false; }
     this.chat.converse(this.formValue);
     this.formValue = '';
   }
-
-    updateScroll() {
-        let element = document.getElementsByClassName("chat__content")[0];
-        element.scrollTop = element.scrollHeight;
-    }
 
 }

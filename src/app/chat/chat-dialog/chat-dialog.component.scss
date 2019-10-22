@@ -1,5 +1,7 @@
 
 .chat {
+  max-width: 600px;
+  margin: auto;
   background: #f5f5f5;
   position: absolute;
   left: 0;
@@ -78,25 +80,46 @@
 .message-from {
   background-color: #ffffff;
   margin-right: auto;
-  margin-left: 45px;
+  margin-left: 80px;
 }
 
 .message-from::before {
   content: '';
   background: url("../../../assets/bot-avatar.jpg");
-  width: 40px;
-  height: 40px;
+  width: 70px;
+  height: 70px;
   display: block;
   background-size: contain;
   border-radius: 50%;
   position: absolute;
-  left: -45px;
+  left: -80px;
   top: 0;
 }
 
 .message-to {
   background-color: #E5E4E9;
   margin-left: auto;
+}
+
+.message__gallery {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 8px;
+}
+
+.message__gallery .img {
+  min-width: 100px;
+  min-height: 100px;
+  flex: 1;
+  margin: 4px;
+  display: block;
+  -o-object-fit: fill;
+  object-fit: fill;
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
 
 @keyframes fade {
