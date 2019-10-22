@@ -3,127 +3,44 @@ import { CardResponse } from '../responses/card.response';
 
 const topExhibits = [
   {
-    "title": "Платье",
-    "description" : "Платье из крапивного полотна. Ханты. XIX век", 
-    "image": "https://mvk.yanao.ru/upload/iblock/a43/Plate-iz-krapivnogo-polotna.-KHanty.-XIX-vek.jpg", 
-
+    "title": "Археологическая коллекция",
+    "description" : "В археологическом собрании МВК представлены уникальные изделия, выполненные из глины, кости, металла, камня, органических материалов (дерева, бересты, кожи и пр.), иллюстрирующие повседневную жизнь человека Севера от эпохи мезолита (6 тысячелетие до н. э.) до Нового времени (XVI–XIX века). ", 
+     "url": "https://mvk.yanao.ru/kollektsii/arkheologicheskaya/",
   },
   {
-    "title": "Ложка",
-    "description" : "Ложка с навершием в виде головы оленя. Сакрально-производственный центр Усть-Полуй. II век до н. э – II век н. э.", 
-    "image": "https://mvk.yanao.ru/upload/iblock/1ae/Lozhka-s-navershiem-v-vide-golovy-olenya.-Sakralno_proizvodstvennyy-tsentr-Ust_Poluy.-II-vek-do-n.-e-_-II-vek-n.-e..jpg", 
-
+    "title": "Коллекция графики",
+    "description" : "На начало 2019 года основной фонд коллекции «Графика» насчитывает 633 единицы хранения, научно-вспомогательный – 373 единицу. В ней представлена уникальная и печатная графика 1930-х – 2010-х годов художников-любителей и профессионалов Ямала, ведущих российских мастеров, а также графиков Финляндии, Латвии, Эстонии, Казахстана, США. Коллекция начала формироваться в 1970-е годы.", 
+    "url": "https://mvk.yanao.ru/kollektsii/kollektsiya-grafiki/",
   },
   {
-    "title": "Мумия мамонтенка Любы",
+    "title": "Коллекция «декоративно-прикладное искусство»",
     "description" : "Мумия мамонтенка Любы. Геологический возраст 42 000 лет", 
-    "image": "https://mvk.yanao.ru/upload/iblock/854/Mumiya-mamontenka-Lyuby.-Geologicheskiy-vozrast-42-000-let.jpg", 
-
+    "url": "https://mvk.yanao.ru/kollektsii/kollektsiya-dpi/",
   },
   {
-    "title": "Сумка для рукоделия",
-    "description" : "Сумка для рукоделия. Ненцы. Первая половина XX века", 
-    "image": "https://mvk.yanao.ru/upload/iblock/2d1/Sumka-dlya-rukodeliya.-Nentsy.-Pervaya-polovina-XX-veka.jpg", 
-
+    "title": "Документальный фонд",
+    "description" : "Коллекция «Документы» охватывает период со второй половины XVIII до начала XXI века и состоит из 38 313 единиц хранения, находящихся в основном, научно-вспомогательном фондах и фонде временного хранения. Она включает в себя ряд тематических подборок, коллекцию личных фондов и собрания однотипных рукописных, машинописных и печатных документов.", 
+    "url": "https://mvk.yanao.ru/kollektsii/dokumentalnyy-fond/",
   },
   {
-    "title": "Бляха",
-    "description" : "Бляха с изображением всадника на коне. XIII-XIV века. Серебро", 
-    "image": "https://mvk.yanao.ru/upload/iblock/de7/Blyakha-s-izobrazheniem-vsadnika-na-kone.-XIII_XIV-veka.-Serebro.jpg", 
-
+    "title": "Фонд редкой книги",
+    "description" : "Коллекция редкой и старопечатной книги насчитывает свыше 4000 единиц хранения. В ее составе – уникальные издания второй половины XIX – начала XX столетия, отечественная литература 1930–1950-х годов. Начало коллекции было положено в августе 1898 года, когда глава Обдорской православной миссии игумен Иринарх (Иван Семёнович Шемановский) при миссии и Братстве святителя Гурия архиепископа Казанского и Свияжского чудотворца создал первую библиотеку Обдорска и всего края.",
+    "url": "https://mvk.yanao.ru/kollektsii/fond-redkoy-knigi/",
+     
   },
   {
-    "title": "Скульптура антропоморфная",
-    "description" : "Скульптура антропоморфная. Сакрально-производственный центр Усть-Полуй. II век до н.э -  II век н.э.", 
-    "image": "https://mvk.yanao.ru/upload/iblock/564/Skulptura-antropomorfnaya.-Sakralno_proizvodstvennyy-tsentr-Ust_Poluy.-II-vek-do-n.e-_-II-vek-n.e..jpg", 
-
+    "title": "Коллекция фотографий и негативов",
+    "description" : "Коллекция является составной частью документального фонда. Она охватывает временной период с начала ХХ до начала XXI века и состоит из более 24 000 единиц хранения, находящихся в основном и научно-вспомогательном фондах. Началом систематического и планомерного формирования данной коллекции можно считать 1970-е годы. Представлена коллекция черно-белыми и цветными фотоснимками, черно-белыми и цветными негативами и слайдами на пленочных носителях и черно-белыми негативами и позитивами на стеклянных пластинах.",
+    "url": "https://mvk.yanao.ru/kollektsii/kollektsiya-fotografiy-i-negativov/",
+     
   },
   {
-    "title": "Ленин на Ямале",
-    "description" : "Иван Истомин. Ленин на Ямале. 1940-е. Холст, масло", 
-    "image": "https://mvk.yanao.ru/upload/iblock/393/Ivan-Istomin.-Lenin-na-YAmale.-1940_e.-KHolst_-maslo.jpg", 
-
-  },
-  {
-    "title": "Парка шаманская",
-    "description" : "Парка шаманская. Селькупы. Середина XX века", 
-    "image": "https://mvk.yanao.ru/upload/iblock/cf9/Parka-shamanskaya.-Selkupy.-Seredina-XX-veka.jpg", 
-
-  },
-  {
-    "title": "Скелет мамонта",
-    "description" : "Скелет Монгоченского мамонта. Геологический возраст 17 000 лет", 
-    "image": "https://mvk.yanao.ru/upload/iblock/fbe/Skelet-Mongochenskogo-mamonta.-Geologicheskiy-vozrast-17-000-let.jpg", 
-
-  },
-  {
-    "title": "Пояс мужской",
-    "description" : "Пояс мужской. Ненцы. Начало XX века. Дар В. П. Евладову", 
-    "image": "https://mvk.yanao.ru/upload/iblock/dcb/Poyas-muzhskoy.-Nentsy.-Nachalo-XX-veka.-Dar-V.-P.-Evladovu.jpg", 
-
-  },
-  {
-    "title": "Деревянный оклад зеркала",
-    "description" : "Деревянный оклад зеркала. Конец XIX - начало XX века", 
-    "image": "https://mvk.yanao.ru/upload/iblock/6f8/Derevyannyy-oklad-zerkala.-Konets-XIX-_-nachalo-XX-veka.jpg", 
-
-  },
-  {
-    "title": "Край земли",
-    "description" : "Андрей Яковлев Край земли. 1967. Холст, масло", 
-    "image": "https://mvk.yanao.ru/upload/iblock/e51/Andrey-YAkovlev-Kray-zemli.-1967.-KHolst_-maslo.jpg", 
-
-  },
-  {
-    "title": "Икона Богоматери",
-    "description" : "Евсей Моисеенко. Икона Богоматери. 1973. Бумага, смешанная техника", 
-    "image": "https://mvk.yanao.ru/upload/iblock/502/Evsey-Moiseenko.-Ikona-Bogomateri.-1973.-Bumaga_-smeshannaya-tekhnika.jpg", 
-
-  },
-  {
-    "title": "Нога мамонта",
-    "description" : "Мумифицированная нога Монгоченского мамонта. Геологический возраст 17000 лет", 
-    "image": "https://mvk.yanao.ru/upload/iblock/cb7/Mumifitsirovannaya-noga-Mongochenskogo-mamonta.-Geologicheskiy-vozrast-17000-let.jpg", 
-
-  },
-  {
-    "title": "Граммофон",
-    "description" : "Граммофон. Конец XIX - начало XX века", 
-    "image": "https://mvk.yanao.ru/upload/iblock/fff/Grammofon.-Konets-XIX-_-nachalo-XX-veka.jpg", 
-
-  },
-  {
-    "title": "Камлание",
-    "description" : "Минсалим Тимергазеев.  Камлание. 2003. Бивень мамонта, дерево", 
-    "image": "https://mvk.yanao.ru/upload/iblock/ea2/Minsalim-Timergazeev.-Kamlanie.-2003.-Biven-mamonta_-derevo.jpg",
-  },
-  {
-    "title": "Сосуд берестяной",
-    "description" : "Сосуд берестяной. Сакрально-производственный центр Усть-Полуй. II век до н.э -  II век н.э.", 
-    "image": "https://mvk.yanao.ru/upload/iblock/f6e/Sosud-berestyanoy.-Sakralno_proizvodstvennyy-tsentr-Ust_Poluy.-II-vek-do-n.e-_-II-vek-n.e..jpg", 
-
-  },
-  {
-    "title": "Сумка из гусиных лап",
-    "description" : "Сумка из гусиных лап. Коряки. ХХ век. Мастер М. Лоновцева.", 
-    "image": "https://mvk.yanao.ru/upload/iblock/4ba/Sumka-iz-gusinykh-lap.-Koryaki.-KHKH-vek.-Master-M.-Lonovtseva.jpg", 
-
-  },
-  {
-    "title": "Чучело казарки",
-    "description" : "Чучело краснозобой казарки. 2002", 
-    "image": "https://mvk.yanao.ru/upload/iblock/2a8/CHuchelo-krasnozoboy-kazarki.-2002.jpg", 
-
-  },
-  {
-    "title": "Когда киты уходят",
-    "description" : "Василий Моисеев. Когда киты уходят. 2018. Рог лося, кость кита", 
-    "image": "https://mvk.yanao.ru/upload/iblock/13d/Vasiliy-Moiseev.-Kogda-kity-ukhodyat.-2018.-Rog-losya_-kost-kita.jpgg", 
+    "title": "Нумизматическая коллекция",
+    "description" : "Нумизматическая коллекция МВК на начало 2019 года насчитывает более 3600 единиц хранения. Первые поступления датируются 1970 годом. В состав коллекции входят следующие разделы: монеты, фалеристика, бонистика и филателия. Основную часть нумизматического собрания составляют российские монеты (XVII–XX века). Раздел фалеристики включает в себя государственные награды, памятные и юбилейные медали, нагрудные знаки, сувенирные значки 1970–1990-х годов. Раздел бонистики помогает проследить историю развития обращения бумажных денег в России от XIX века до наших дней. Раздел филателия начал комплектоваться совсем недавно благодаря частному дару.", 
+    "url": "https://mvk.yanao.ru/kollektsii/numizmaticheskaya-kollektsiya/",
   }
 ];
-
 export class TopExhibitIntent implements IntentInterface {
-
   getResponse() {
     const payload = topExhibits[Math.floor(Math.random()*topExhibits.length)];
     return new CardResponse(payload.title, payload.image, payload.description);
