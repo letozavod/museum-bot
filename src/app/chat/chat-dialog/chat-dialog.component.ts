@@ -25,7 +25,7 @@ export class ChatDialogComponent implements OnInit {
   }
 
   formatMessage(msg: string) {
-    return msg.replace('\n', '<br>')
+    return msg.replace(new RegExp('\n', 'g'), '<br>')
       .replace(/(https:\/\/[^ \n]*)/sg, '<a href="$1" target="_blank">[-> ссылка]</a>');
   }
 
