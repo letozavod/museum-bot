@@ -4,14 +4,21 @@ export class CardResponse implements BotResponse {
 
   constructor(
     public title: string, 
-    public image: string, 
-    public description: string, 
+    public image: string|null, 
+    public description: string,
+    public url: string, 
     public buttons = []) {
   }
 
   plainText() {
+
+    let fulfillmentText = `${this.title}\n\n${this.description}`;
+    if(this.url) {
+      fulfillmentText += `\n\nCмотреть на сайте: ${this.url}`;
+    }
+    
     return {
-      "fulfillmentText": `${this.title}\n\n${this.description}`
+      fulfillmentText
     };
   }
 
