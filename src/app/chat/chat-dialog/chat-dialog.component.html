@@ -7,7 +7,7 @@
 
                 <div class="message" [ngClass]="{ 'message-from': message.sentBy === 'bot',
                                     'message-to':   message.sentBy === 'user' }">
-                    {{ message.content }}
+                    {{ message.content.replace('\n', '<br>') }}
                 </div>
 
             </ng-container>
@@ -25,8 +25,11 @@
     <div class="help">
         <div class="help__title">Что я умею:</div>
         <div class="help__list">
-            <button (click)="sendMessage('Интересные экспонаты')" class="help__list-item" title="Интересные экспонаты">Интересные экспонаты</button>
+            <button (click)="sendMessage('Коллекции музея')" class="help__list-item" title="Коллекции музея">Коллекции музея</button>
+            <button (click)="sendMessage('Про мамонтенка Люба')" class="help__list-item" title="Про мамонтенка Люба">Про мамонтенка Люба</button>
             <button (click)="sendMessage('Время работы')" class="help__list-item" title="Время работы">Время работы</button>
+            <button (click)="sendMessage('Стоимость посещения')" class="help__list-item" title="Стоимость посещения">Стоимость посещения</button>
+            <button (click)="sendMessage('Контактная информация')" class="help__list-item" title="Контактная информация">Контактная информация</button>
             <button (click)="sendMessage('Давай сыграем')" class="help__list-item" title="Давай сыграем">Давай сыграем</button>
         </div>
     </div>

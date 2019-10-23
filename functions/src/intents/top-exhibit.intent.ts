@@ -42,7 +42,7 @@ const topExhibits = [
 ];
 export class TopExhibitIntent implements IntentInterface {
   getResponse() {
-    const payload = topExhibits[Math.floor(Math.random()*topExhibits.length)];
-    return new CardResponse(payload.title, null, payload.url, payload.description);
+    const payload = topExhibits[Math.floor(Math.random() * topExhibits.length)];
+    return new CardResponse(payload.title, null, payload.description, payload.url);
   }
 }
