@@ -3,11 +3,10 @@ import { Message, ChatService } from 'src/app/chat.service';
 import { Observable } from 'rxjs';
 import { scan } from 'rxjs/operators';
 
-
 @Component({
   selector: 'app-chat-dialog',
   templateUrl: './chat-dialog.component.html',
-  styleUrls: ['./chat-dialog.component.scss']
+  styleUrls: ['./chat-dialog.component.scss'],
 })
 export class ChatDialogComponent implements OnInit {
 
@@ -23,6 +22,11 @@ export class ChatDialogComponent implements OnInit {
 
     this.formValue = 'Привет!';
     this.sendMessage();
+  }
+
+  formatMessage(msg: string) {
+    return msg.replace('\n', '<br>')
+      .replace(/(https:\/\/[^ \n]*)/sg, '<a href="$1" target="_blank">[-> ссылка]</a>');
   }
 
   sendMessage(msg = null) {

@@ -6,8 +6,8 @@
             <ng-container *ngFor="let message of messages | async">
 
                 <div class="message" [ngClass]="{ 'message-from': message.sentBy === 'bot',
-                                    'message-to':   message.sentBy === 'user' }">
-                    {{ message.content.replace('\n', '<br>') }}
+                                    'message-to':   message.sentBy === 'user' }"
+                                    [innerHTML]="this.formatMessage(message.content)">
                 </div>
 
             </ng-container>

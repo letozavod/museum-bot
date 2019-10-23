@@ -13,7 +13,8 @@ import { ChatModule } from './chat/chat.module';
     BrowserModule,
     ChatModule
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
