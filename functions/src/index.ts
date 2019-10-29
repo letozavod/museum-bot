@@ -1,38 +1,39 @@
 import * as functions from 'firebase-functions';
-import { game, defaultFallback } from './handlers';
-const { WebhookClient } = require('dialogflow-fulfillment');
+import { registerHandlers } from './handlers';
+const { WebhookClient }  = require('dialogflow-fulfillment');
+
+
+const handlersRegisrty = registerHandlers();
 
 exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, response) => {
+
   const agent = new WebhookClient({ request, response });  
-  const intentMap = new Map();
-  if(agent.context.get('gamestage')) {
-    game(agent);
-  } else {
-    intentMap.set('game', game);
-    intentMap.set('Default Fallback Intent', defaultFallback);
+  const handler = handlersRegisrty.findHandler(agent);
+  if(handler) {
+    handler.handle(agent);
   }
-  agent.handleRequest(intentMap);
+  agent.send_();
 });
 
 
 
 
-export const dialogFlowfullfilment = functions.https.onRequest((request, response) => {
+  // export const dialogFlowfullfilment = functions.https.onRequest((request, response) => {
   // const intentName = request.body.queryResult.intent.displayName;
   // const intent = IntentFactory.getIntent(intentName);
   // const botResponse = intent.getResponse();
   
   // response.send(botResponse.plainText());
-});
+  // });
 
 
-export const dialogFlowfullfilmentRich = functions.https.onRequest((request, response) => {
+  // export const dialogFlowfullfilmentRich = functions.https.onRequest((request, response) => {
   // const intentName = request.body.queryResult.intent.displayName;
   // const intent = IntentFactory.getIntent(intentName);
   // const botResponse = intent.getResponse();
   
   // response.send(botResponse.richMessage());
-});
+  // });
 
 
 // export const aliceWrapperWebHook = functions.https.onRequest(async (request, response) => {
